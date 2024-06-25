@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   # Defines the root path route ("/")
   root 'main#index'
-  match 'about', to: 'main#about', via: :get
-  match 'hello', to: 'main#hello', via: :get
+  get 'about', to: 'main#about'
+  get 'hello', to: 'main#hello'
 
   get 'main/index' # match 'main/index', to: 'main#index', via: :get
   get 'tasks/index'

@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# /app/controllers/main_controller.rb
 class MainController < ApplicationController
   def index
     # render 'index'
