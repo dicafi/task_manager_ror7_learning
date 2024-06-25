@@ -3,3 +3,4 @@ AllCops:
   NewCops: enable
   Exclude:
     - 'config/environments/development.rb'
+    - 'db/migrate/*'
