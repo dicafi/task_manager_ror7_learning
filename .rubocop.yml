@@ -1,6 +1,14 @@
 require: rubocop-rails
+Style/Documentation:
+  Enabled: false
+
 AllCops:
   NewCops: enable
   Exclude:
     - 'config/environments/development.rb'
-    - 'db/migrate/*'
+    - 'db/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+    - 'db/seeds.rb'

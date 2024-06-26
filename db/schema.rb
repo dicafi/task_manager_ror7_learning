@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_25_194350) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_25_202443) do
+  create_table "categories", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tasks", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -18,6 +24,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_25_194350) do
     t.boolean "completed", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category_id"
+    t.index ["category_id"], name: "index_tasks_on_category_id"
   end
 
 end
