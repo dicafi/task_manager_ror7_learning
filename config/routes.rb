@@ -7,6 +7,16 @@ Rails.application.routes.draw do
   get 'hello', to: 'main#hello'
   get 'main/index' # match 'main/index', to: 'main#index', via: :get
 
+  # Session routes
+  get 'menu' => 'access#menu'
+  get 'login' => 'access#new'
+  delete 'logout' => 'access#destroy'
+  resource :access, controller: 'access', only: %i[new create destroy] do
+    member do
+      get :menu
+    end
+  end
+
   # Categories routes
   resources :categories do
     member do
