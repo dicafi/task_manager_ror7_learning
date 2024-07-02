@@ -30,3 +30,4 @@
 en:
   hello: "Hello world"
   login_success: 'Log in successful'
+  logout_success: 'Log out successful'
