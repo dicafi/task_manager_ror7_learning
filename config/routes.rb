@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   # Defines the root path route ("/")
-  root 'main#index'
+  root 'access#menu'
   get 'about', to: 'main#about'
   get 'hello', to: 'main#hello'
   get 'main/index' # match 'main/index', to: 'main#index', via: :get

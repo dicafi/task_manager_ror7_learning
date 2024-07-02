@@ -4,6 +4,7 @@
 class MainController < ApplicationController
   def index
     # render 'index'
+    render 'access/menu'
   end
 
   def about

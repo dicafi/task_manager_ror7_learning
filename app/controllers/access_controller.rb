@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 class AccessController < ApplicationController
+  skip_before_action :confirm_logged_in, only: %i[new create]
+
   # display menu
-  def menu
-    user_info_from_session
-  end
+  def menu; end
 
   # display login form
   def new
-    user_info_from_session
     redirect_to menu_path if logged_in?
   end
 

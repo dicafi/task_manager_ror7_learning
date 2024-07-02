@@ -31,3 +31,4 @@ en:
   hello: "Hello world"
   login_success: 'Log in successful'
   logout_success: 'Log out successful'
+  ask_login: 'Please log in'
