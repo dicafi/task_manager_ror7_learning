@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class AccessController < ApplicationController
+  layout 'application'
+
   skip_before_action :confirm_logged_in, only: %i[new create]
 
   # display menu
