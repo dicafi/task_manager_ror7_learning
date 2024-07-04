@@ -6,5 +6,6 @@
 <p>Created by <%= @created_by %></p>
 
 <% content_for(:script) do %>
-  <script>alert('Welcome!')</script>
+  <% name = "Peluchosa'); alert('Gotcha" %>
+  <%= javascript_tag("alert('Welcome, #{j(name)}!');") %>
 <% end %>
